@@ -34,7 +34,6 @@ export const GetZipInfo = async (
   try {
     const response = await rp.get(`http://api.zippopotam.us/${countryCode}/${zip}`)
     const parsed = JSON.parse(response)
-    console.log(parsed)
 
     return toGraphqlResponse(parsed)
   } catch (e) {
